@@ -1,0 +1,27 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: tepkinet.destek@gmail.com
+    password: bzux goqm lusy coqp
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tepkinet_db
+    username: postgres
+    password: pass1923
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+
+jwt:
+  secret: mehmet123mehmet123mehmet123mehmet123

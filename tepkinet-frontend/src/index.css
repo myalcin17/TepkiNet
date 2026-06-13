@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --color-brand-50: #f0f4f8;
+  --color-brand-100: #dce4ed;
+  --color-brand-500: #2c5282;
+  --color-brand-600: #2a4365;
+  --color-brand-700: #1a365d;
+  --color-brand-800: #153e75;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply min-h-screen bg-slate-50 font-sans text-slate-700 dark:bg-slate-950 dark:text-slate-300;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer utilities {
+  .skeleton-shimmer {
+    @apply relative overflow-hidden bg-slate-200 dark:bg-slate-700;
+  }
+
+  .skeleton-shimmer::after {
+    content: '';
+    @apply absolute inset-0 -translate-x-full animate-[shimmer_1.4s_ease-in-out_infinite] bg-gradient-to-r from-transparent via-white/50 to-transparent dark:via-white/10;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

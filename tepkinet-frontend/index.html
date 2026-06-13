@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TepkiNet</title>
+    <script>
+      (function () {
+        var key = 'tepkinet-theme';
+        var stored = localStorage.getItem(key);
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var useDark =
+          stored === 'dark' || (stored !== 'light' && (stored === 'system' || !stored) && prefersDark);
+        if (useDark) document.documentElement.classList.add('dark');
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
