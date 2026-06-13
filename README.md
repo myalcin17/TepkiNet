@@ -198,7 +198,7 @@ esas alınarak geliştirilmiştir.
 
 Software Engineering Student
 
-GitHub: https://github.com/<myalcin17>
+GitHub: [https://github.com/<myalcin17>](https://github.com/myalcin17)
 
 ---
 
